@@ -33,8 +33,14 @@
       background: #fafafa;
     }
 
-    .case h3 {
-      margin-top: 0;
+    /* Case heading rendered via CSS — invisible to accessibility tree */
+    .case::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 12px;
+      color: #333;
     }
 
     .row {
@@ -75,9 +81,12 @@
       background: #fff;
     }
 
+    /* Notes visible to humans only — styled subtly */
     .small-note {
-      color: #555;
-      font-size: 14px;
+      color: #888;
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 8px;
     }
 
     .bad {
@@ -112,19 +121,19 @@
 </head>
 <body>
 
+  <!-- Page title: visible + accessible, fine to keep -->
   <h1>Android Accessibility + TalkBack Testbed</h1>
 
-  <p>
-    This page intentionally contains both accessible and inaccessible text field implementations.
-    Use Android TalkBack, Accessibility Scanner, uiautomator dump, OCR systems, and your FLAN-T5 model
-    to inspect how semantics differ.
-  </p>
+  <!-- Section headings: aria-hidden so uiautomator2 ignores them -->
+  <!-- Small notes: aria-hidden so they don't leak into prompts -->
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 1: Properly Labeled Fields (Baseline)  -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>1. Properly Labeled Fields (Baseline)</h2>
+    <h2 aria-hidden="true">1. Properly Labeled Fields (Baseline)</h2>
 
-    <div class="case good">
-      <h3>Case 1A - Correct Label Association</h3>
+    <div class="case good" data-label="Case 1A — Correct Label Association">
 
       <div class="row">
         <label for="username-good">Username</label>
@@ -135,243 +144,256 @@
         <label for="password-good">Password</label>
         <input id="password-good" type="password" />
       </div>
+
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 2: Missing Label + Missing Placeholder -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>2. Missing Label + Missing Placeholder</h2>
+    <h2 aria-hidden="true">2. Missing Label + Missing Placeholder</h2>
 
-    <div class="case bad">
-      <h3>Case 2A - Completely Unlabeled</h3>
+    <div class="case bad" data-label="Case 2A — Completely Unlabeled">
 
       <div class="row">
         <input type="text" />
       </div>
 
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Expected TalkBack result: "Edit box" or generic field announcement.
-      </div>
+      </p>
+
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 3: Visual Label, No Semantic Link      -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>3. Visual Label But No Semantic Association</h2>
+    <h2 aria-hidden="true">3. Visual Label But No Semantic Association</h2>
 
-    <div class="case bad">
-      <h3>Case 3A - Nearby Text Only</h3>
-
+    <div class="case bad" data-label="Case 3A — Nearby Text Only">
       <div class="row">
-        <div>Email Address</div>
+        <!-- Plain div: visible to humans, not reliably linked by a11y APIs -->
+        <div aria-hidden="true">Email Address</div>
         <input type="email" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Humans understand this visually. Accessibility APIs may not reliably associate them.
-      </div>
+      </p>
     </div>
 
-    <div class="case good">
-      <h3>Case 3B - Properly Linked Label</h3>
-
+    <div class="case good" data-label="Case 3B — Properly Linked Label">
       <div class="row">
         <label for="email-good">Email Address</label>
         <input id="email-good" type="email" />
       </div>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 4: Placeholder-Only Design             -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>4. Placeholder-Only Design</h2>
+    <h2 aria-hidden="true">4. Placeholder-Only Design</h2>
 
-    <div class="case bad">
-      <h3>Case 4A - Placeholder Disappears After Typing</h3>
-
+    <div class="case bad" data-label="Case 4A — Placeholder Disappears After Typing">
       <div class="row">
         <input type="text" placeholder="Enter your phone number" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         After typing, semantic meaning can disappear.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 5: Icon-Based Inputs                   -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>5. Icon-Based Inputs</h2>
+    <h2 aria-hidden="true">5. Icon-Based Inputs</h2>
 
-    <div class="case bad">
-      <h3>Case 5A - Icons Without Labels</h3>
-
+    <div class="case bad" data-label="Case 5A — Icons Without Labels">
       <div class="row icon-field">
-        <span class="icon">👤</span>
+        <!-- aria-hidden on icon: it carries no a11y meaning here intentionally -->
+        <span class="icon" aria-hidden="true">👤</span>
         <input type="text" />
       </div>
-
       <div class="row icon-field">
-        <span class="icon">🔒</span>
+        <span class="icon" aria-hidden="true">🔒</span>
         <input type="password" />
       </div>
     </div>
 
-    <div class="case good">
-      <h3>Case 5B - Icons With Accessibility Labels</h3>
-
+    <div class="case good" data-label="Case 5B — Icons With Accessibility Labels">
       <div class="row icon-field">
         <span class="icon" aria-hidden="true">👤</span>
         <input type="text" aria-label="Username" />
       </div>
-
       <div class="row icon-field">
         <span class="icon" aria-hidden="true">🔒</span>
         <input type="password" aria-label="Password" />
       </div>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 6: Multiple Ambiguous Fields           -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>6. Multiple Ambiguous Fields</h2>
+    <h2 aria-hidden="true">6. Multiple Ambiguous Fields</h2>
 
-    <div class="case bad">
-      <h3>Case 6A - Multiple Generic Inputs</h3>
-
+    <div class="case bad" data-label="Case 6A — Multiple Generic Inputs">
       <div class="group">
         <input type="text" />
         <input type="text" />
         <input type="text" />
         <input type="text" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Useful for testing ranking and contextual inference.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 7: Password / OTP / PIN Confusion      -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>7. Password / OTP / PIN Confusion</h2>
+    <h2 aria-hidden="true">7. Password / OTP / PIN Confusion</h2>
 
-    <div class="case bad">
-      <h3>Case 7A - Secure Fields Without Context</h3>
-
+    <div class="case bad" data-label="Case 7A — Secure Fields Without Context">
       <div class="group">
         <input type="password" />
         <input type="password" />
         <input type="password" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Are these password, PIN, OTP, CVV, or security answers?
-      </div>
+      </p>
     </div>
 
-    <div class="case good">
-      <h3>Case 7B - Proper Secure Context</h3>
-
+    <div class="case good" data-label="Case 7B — Proper Secure Context">
       <div class="group">
         <div>
           <label for="login-pass">Account Password</label>
           <input id="login-pass" type="password" />
         </div>
-
         <div>
           <label for="otp">One-Time Password</label>
           <input id="otp" inputmode="numeric" />
         </div>
       </div>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 8: OCR-Only Context                    -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>8. OCR-Only Context</h2>
+    <h2 aria-hidden="true">8. OCR-Only Context</h2>
 
-    <div class="case bad">
-      <h3>Case 8A - Text As Visual Element</h3>
-
-      <div style="font-size: 22px; font-weight: bold; margin-bottom: 10px;">
+    <div class="case bad" data-label="Case 8A — Text As Visual Element">
+      <!-- Large visual text: aria-hidden so it doesn't feed into prompts -->
+      <div
+        aria-hidden="true"
+        style="font-size: 22px; font-weight: bold; margin-bottom: 10px;"
+      >
         USERNAME
       </div>
-
       <input type="text" />
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Accessibility tree may not strongly associate the visual text with the field.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 9: ARIA Label Only                     -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>9. ARIA Label Only</h2>
+    <h2 aria-hidden="true">9. ARIA Label Only</h2>
 
-    <div class="case good">
-      <h3>Case 9A - Invisible Semantic Label</h3>
-
+    <div class="case good" data-label="Case 9A — Invisible Semantic Label">
       <div class="row">
         <input type="text" aria-label="Search users and hashtags" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         No visible label, but accessibility APIs should expose proper semantics.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 10: Dynamic Form Generation            -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>10. Dynamic Form Generation</h2>
+    <h2 aria-hidden="true">10. Dynamic Form Generation</h2>
 
-    <div class="case bad">
-      <h3>Case 10A - Runtime Generated Inputs</h3>
-
+    <div class="case bad" data-label="Case 10A — Runtime Generated Inputs">
       <div id="dynamic-form"></div>
-
       <button onclick="generateFields()">Generate Dynamic Inputs</button>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 11: Fake Custom Fields                 -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>11. Fake Custom Fields (Non-input Divs)</h2>
+    <h2 aria-hidden="true">11. Fake Custom Fields (Non-input Divs)</h2>
 
-    <div class="case bad">
-      <h3>Case 11A - Div Styled As Input</h3>
-
+    <div class="case bad" data-label="Case 11A — Div Styled As Input">
       <div class="fake-field" contenteditable="true">
         Type here...
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Tests how accessibility handles non-native editable regions.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 12: Canvas-Based Custom Field          -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>12. Canvas-Based Custom Field</h2>
+    <h2 aria-hidden="true">12. Canvas-Based Custom Field</h2>
 
-    <div class="case bad">
-      <h3>Case 12A - Visually Drawn Input</h3>
-
+    <div class="case bad" data-label="Case 12A — Visually Drawn Input">
       <canvas id="myCanvas" width="500" height="80" class="canvas-field"></canvas>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Canvas content is often inaccessible unless semantics are manually added.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 13: Nested and Complex Hierarchies     -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>13. Nested and Complex Hierarchies</h2>
+    <h2 aria-hidden="true">13. Nested and Complex Hierarchies</h2>
 
-    <div class="case bad">
-      <h3>Case 13A - Deeply Nested Field</h3>
-
+    <div class="case bad" data-label="Case 13A — Deeply Nested Field">
       <div>
         <div>
           <div>
             <div>
-              <span>Customer ID</span>
+              <!-- aria-hidden: prevents "Customer ID" leaking as nearby text
+                   since it has no semantic for association with the input -->
+              <span aria-hidden="true">Customer ID</span>
             </div>
           </div>
         </div>
-
         <div>
           <div>
             <div>
@@ -380,36 +402,38 @@
           </div>
         </div>
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Useful for hierarchy traversal and sibling association testing.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 14: Misleading Labels                  -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>14. Misleading Labels</h2>
+    <h2 aria-hidden="true">14. Misleading Labels</h2>
 
-    <div class="case bad">
-      <h3>Case 14A - Wrong Accessibility Metadata</h3>
-
+    <div class="case bad" data-label="Case 14A — Wrong Accessibility Metadata">
       <div class="row">
-        <label for="wrong-field">Phone Number</label>
+        <label for="wrong-field" aria-hidden="true">Phone Number</label>
         <input id="wrong-field" type="email" aria-label="Password" />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Visible label, input type, and accessibility label intentionally conflict.
-      </div>
+      </p>
     </div>
+
   </div>
 
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 15: Search Bar Simulation              -->
+  <!-- ═══════════════════════════════════════════════ -->
   <div class="section">
-    <h2>15. Search Bar Simulation</h2>
+    <h2 aria-hidden="true">15. Search Bar Simulation</h2>
 
-    <div class="case">
-      <h3>Case 15A - Social Media Search Pattern</h3>
-
+    <div class="case" data-label="Case 15A — Social Media Search Pattern">
       <div class="row">
         <input
           type="search"
@@ -417,29 +441,25 @@
           aria-label="Search users, hashtags, and posts"
         />
       </div>
-
-      <div class="small-note">
+      <p class="small-note" aria-hidden="true">
         Useful for testing semantic enrichment by your model.
-      </div>
+      </p>
     </div>
+
   </div>
 
   <script>
     function generateFields() {
       const container = document.getElementById('dynamic-form');
       container.innerHTML = '';
-
       for (let i = 1; i <= 5; i++) {
         const wrapper = document.createElement('div');
         wrapper.style.marginBottom = '10px';
-
         const input = document.createElement('input');
         input.type = 'text';
-
         if (i % 2 === 0) {
           input.setAttribute('placeholder', 'Dynamic field ' + i);
         }
-
         wrapper.appendChild(input);
         container.appendChild(wrapper);
       }
@@ -447,10 +467,8 @@
 
     const canvas = document.getElementById('myCanvas');
     const ctx = canvas.getContext('2d');
-
     ctx.font = '24px Arial';
     ctx.fillText('EMAIL ADDRESS', 20, 35);
-
     ctx.strokeRect(20, 45, 300, 25);
   </script>
 
