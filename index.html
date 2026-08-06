@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility degradation testbed</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="index">
+  <h1>Accessibility degradation testbed</h1>
+  <p>One hand-authored signup form, rendered identically at six levels of
+     accessibility-tree degradation. Visual layout is held constant; only the
+     programmatic semantics change.</p>
+  <table>
+    <caption>Sign-up form</caption>
+    <thead><tr><th>Level</th><th>Degradation applied</th>
+      <th>Fields without a correct name</th></tr></thead>
+    <tbody>
+      <tr><td><a href="L0/">L0</a></td><td>Baseline — every control correctly named</td><td><code>0 / 20</code></td></tr><tr><td><a href="L1/">L1</a></td><td>Label associations broken (for/id unbound)</td><td><code>8 / 20</code></td></tr><tr><td><a href="L2/">L2</a></td><td>All AT-only strings removed (sr-only labels, ARIA, alt, title)</td><td><code>12 / 20</code></td></tr><tr><td><a href="L3/">L3</a></td><td>Placeholder, autocomplete and semantic id/name removed</td><td><code>18 / 20</code></td></tr><tr><td><a href="L4/">L4</a></td><td>Native controls replaced by generic divs</td><td><code>15 / 20</code></td></tr><tr><td><a href="L5/">L5</a></td><td>Misleading names (labels and placeholders swapped between fields)</td><td><code>14 / 20</code></td></tr>
+    </tbody>
+  </table>
+</main>
+</body>
+</html>
