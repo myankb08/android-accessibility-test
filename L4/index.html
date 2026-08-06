@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="e00"/>
+  <title>
+   Create Your Account — L4
+  </title>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <span aria-hidden="true" class="level-badge" data-level-badge="">
+   L4
+  </span>
+  <header class="topbar">
+   <a class="topbar__brand" href="#main">
+    Account
+   </a>
+   <nav class="topbar__nav">
+    <a href="#main">
+     Sign In
+    </a>
+    <a aria-current="page" href="#main">
+     Create Your Account
+    </a>
+    <a href="#main">
+     FAQ
+    </a>
+   </nav>
+  </header>
+  <main class="page" id="e01">
+   <h1 class="page__title">
+    Create Your Account
+   </h1>
+   <p class="page__lede">
+    One account is all you need to access every service.
+    <br/>
+    Already have an account?
+    <a href="#main">
+     Sign In
+     <span aria-hidden="true">
+      ↗
+     </span>
+    </a>
+   </p>
+   <form action="#" class="form" method="post" novalidate="">
+    <!-- ============ SECTION: Your name ============ -->
+    <section class="section">
+     <div class="row row--2">
+      <div class="field">
+       <span aria-hidden="true" class="ghost">
+        First Name
+       </span>
+       <div class="control" contenteditable="true" data-field="first-name" id="e02" name="e02">
+       </div>
+      </div>
+      <div class="field">
+       <span aria-hidden="true" class="ghost">
+        Last Name
+       </span>
+       <div class="control" contenteditable="true" data-field="last-name" id="e03" name="e03">
+       </div>
+      </div>
+     </div>
+     <div class="field field--stacked">
+      <span class="field__cap">
+       Country/Region
+      </span>
+      <div class="control control--select" data-field="country-region" id="e04" name="e04" tabindex="0">
+       United States
+      </div>
+     </div>
+     <div class="fieldset">
+      <div class="fieldset__legend">
+       Birthday
+       <div class="iconbtn" data-field="birthday-help" tabindex="0">
+        <span aria-hidden="true">
+         ?
+        </span>
+       </div>
+      </div>
+      <div class="row row--3">
+       <div class="field">
+        <div class="control control--select" data-field="birth-month" id="e05" name="e05" tabindex="0">
+         Month
+        </div>
+       </div>
+       <div class="field">
+        <div class="control control--select" data-field="birth-day" id="e06" name="e06" tabindex="0">
+         Day
+        </div>
+       </div>
+       <div class="field">
+        <div class="control control--select" data-field="birth-year" id="e07" name="e07" tabindex="0">
+         Year
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Account credentials ============ -->
+    <section class="section">
+     <div class="field">
+      <span aria-hidden="true" class="ghost">
+       name@example.com
+      </span>
+      <div class="control" contenteditable="true" data-field="email" id="e08" name="e08">
+      </div>
+     </div>
+     <div class="field">
+      <span aria-hidden="true" class="ghost">
+       Password
+      </span>
+      <div class="control" contenteditable="true" data-field="password" id="e09" name="e09">
+      </div>
+     </div>
+     <div class="field">
+      <span aria-hidden="true" class="ghost">
+       Confirm Password
+      </span>
+      <div class="control" contenteditable="true" data-field="confirm-password" id="e10" name="e10">
+      </div>
+     </div>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Phone verification ============ -->
+    <section class="section">
+     <div class="field field--stacked">
+      <span class="field__cap">
+       Country Options
+      </span>
+      <div class="control control--select" data-field="phone-country" id="e11" name="e11" tabindex="0">
+       +1 (United States)
+      </div>
+     </div>
+     <div class="field field--withicon">
+      <span aria-hidden="true" class="ghost">
+       Phone Number
+      </span>
+      <div class="control" contenteditable="true" data-field="phone-number" id="e12" name="e12">
+      </div>
+      <div class="iconbtn iconbtn--inset" data-field="phone-help" tabindex="0">
+       <span aria-hidden="true">
+        ?
+       </span>
+      </div>
+     </div>
+     <p class="hint" id="e13">
+      Be sure to enter a phone number you can always access. It will be used to verify
+        your identity any time you sign in on a new device or web browser. Messaging or
+        data rates may apply.
+     </p>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Email preferences ============ -->
+    <section class="section">
+     <div class="check">
+      <div class="check__box" data-field="opt-announcements" id="e14" name="e14" tabindex="0">
+      </div>
+      <div class="check__body">
+       <span class="check__label">
+        Announcements
+       </span>
+       <p class="check__desc" id="e15">
+        Receive emails and communications including announcements, marketing,
+            recommendations, and updates about products, services and software.
+       </p>
+      </div>
+     </div>
+     <div class="check">
+      <div class="check__box" data-field="opt-media" id="e16" name="e16" tabindex="0">
+      </div>
+      <div class="check__body">
+       <span class="check__label">
+        Apps, Music, TV, and More
+       </span>
+       <p class="check__desc" id="e17">
+        Receive emails and communications including new releases, exclusive content,
+            special offers, and marketing and recommendations for apps, music, movies,
+            TV, books, and podcasts.
+       </p>
+      </div>
+     </div>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Verification ============ -->
+    <section class="section">
+     <div class="verify">
+      <img class="verify__img" data-field="captcha-image" height="88" src="../assets/captcha.svg" width="220"/>
+      <div class="field verify__field">
+       <span aria-hidden="true" class="ghost">
+        Type the characters in the image
+       </span>
+       <div class="control" contenteditable="true" data-field="captcha-input" id="e18" name="e18">
+       </div>
+      </div>
+     </div>
+     <div class="verify__actions">
+      <div class="linkbtn" data-field="new-code" tabindex="0">
+       <span aria-hidden="true" class="linkbtn__icon">
+        ↻
+       </span>
+       <span class="linkbtn__text">
+        New Code
+       </span>
+      </div>
+      <span aria-hidden="true" class="verify__sep">
+       |
+      </span>
+      <div class="linkbtn" data-field="audio-code" tabindex="0">
+       <span aria-hidden="true" class="linkbtn__icon">
+        🔊
+       </span>
+       <span aria-hidden="true" class="linkbtn__text">
+        Vision Impaired
+       </span>
+      </div>
+     </div>
+    </section>
+    <div class="submit">
+     <div class="btn" data-field="continue" tabindex="0">
+      <span>
+       Continue
+      </span>
+     </div>
+    </div>
+   </form>
+  </main>
+ </body>
+</html>
