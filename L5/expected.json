@@ -1,0 +1,167 @@
+{
+  "page": "apple-signup",
+  "level": "L5",
+  "description": "Misleading names (labels and placeholders swapped between fields)",
+  "fields": [
+    {
+      "field": "first-name",
+      "order": 1,
+      "true_label": "First Name",
+      "exposed_name": "Email address",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "last-name",
+      "order": 2,
+      "true_label": "Last Name",
+      "exposed_name": "Phone Number",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "country-region",
+      "order": 3,
+      "true_label": "Country/Region",
+      "exposed_name": "Country/Region",
+      "exposed_role": "combobox",
+      "status": "named"
+    },
+    {
+      "field": "birthday-help",
+      "order": 4,
+      "true_label": "Why we ask for your birthday",
+      "exposed_name": "Why we ask for your phone number",
+      "exposed_role": "button",
+      "status": "misnamed"
+    },
+    {
+      "field": "birth-month",
+      "order": 5,
+      "true_label": "Birthday Month",
+      "exposed_name": "Day",
+      "exposed_role": "combobox",
+      "status": "misnamed"
+    },
+    {
+      "field": "birth-day",
+      "order": 6,
+      "true_label": "Birthday Day",
+      "exposed_name": "Month",
+      "exposed_role": "combobox",
+      "status": "misnamed"
+    },
+    {
+      "field": "birth-year",
+      "order": 7,
+      "true_label": "Birthday Year",
+      "exposed_name": "Confirm Password",
+      "exposed_role": "combobox",
+      "status": "misnamed"
+    },
+    {
+      "field": "email",
+      "order": 8,
+      "true_label": "Email address",
+      "exposed_name": "First Name",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "password",
+      "order": 9,
+      "true_label": "Password",
+      "exposed_name": "Type the characters in the image",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "confirm-password",
+      "order": 10,
+      "true_label": "Confirm Password",
+      "exposed_name": "Year",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "phone-country",
+      "order": 11,
+      "true_label": "Phone country code",
+      "exposed_name": "Country Options",
+      "exposed_role": "combobox",
+      "status": "named"
+    },
+    {
+      "field": "phone-number",
+      "order": 12,
+      "true_label": "Phone Number",
+      "exposed_name": "Last Name",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "phone-help",
+      "order": 13,
+      "true_label": "Why we ask for your phone number",
+      "exposed_name": "Why we ask for your birthday",
+      "exposed_role": "button",
+      "status": "misnamed"
+    },
+    {
+      "field": "opt-announcements",
+      "order": 14,
+      "true_label": "Announcements",
+      "exposed_name": "Announcements",
+      "exposed_role": "checkbox",
+      "status": "named"
+    },
+    {
+      "field": "opt-media",
+      "order": 15,
+      "true_label": "Apps, Music, TV, and More",
+      "exposed_name": "Apps, Music, TV, and More",
+      "exposed_role": "checkbox",
+      "status": "named"
+    },
+    {
+      "field": "captcha-image",
+      "order": 16,
+      "true_label": "Verification image showing four distorted characters",
+      "exposed_name": "Hear the characters instead",
+      "exposed_role": "image",
+      "status": "misnamed"
+    },
+    {
+      "field": "captcha-input",
+      "order": 17,
+      "true_label": "Type the characters in the image",
+      "exposed_name": "Password",
+      "exposed_role": "textbox",
+      "status": "misnamed"
+    },
+    {
+      "field": "new-code",
+      "order": 18,
+      "true_label": "New Code",
+      "exposed_name": "New Code",
+      "exposed_role": "button",
+      "status": "named"
+    },
+    {
+      "field": "audio-code",
+      "order": 19,
+      "true_label": "Hear the characters instead",
+      "exposed_name": "Verification image showing four distorted characters",
+      "exposed_role": "button",
+      "status": "misnamed"
+    },
+    {
+      "field": "continue",
+      "order": 20,
+      "true_label": "Continue",
+      "exposed_name": "Continue",
+      "exposed_role": "button",
+      "status": "named"
+    }
+  ]
+}
