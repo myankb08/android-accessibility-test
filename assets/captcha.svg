@@ -1,1 +1,14 @@
-h
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="88" viewBox="0 0 220 88" role="img">
+  <rect width="220" height="88" fill="#f5f5f7"/>
+  <g stroke="#c7c7cc" stroke-width="1">
+    <path d="M0 20 Q110 34 220 12" fill="none"/>
+    <path d="M0 52 Q110 40 220 60" fill="none"/>
+    <path d="M0 74 Q110 88 220 70" fill="none"/>
+  </g>
+  <g fill="#3a3a3c" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700">
+    <text x="26"  y="60" transform="rotate(-12 26 60)">7</text>
+    <text x="74"  y="58" transform="rotate(9 74 58)">Q</text>
+    <text x="120" y="62" transform="rotate(-6 120 62)">n</text>
+    <text x="166" y="56" transform="rotate(14 166 56)">4</text>
+  </g>
+</svg>
