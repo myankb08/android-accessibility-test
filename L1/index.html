@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Create Your Account — L1
+  </title>
+  <link href="../style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <span aria-hidden="true" class="level-badge" data-level-badge="">
+   L1
+  </span>
+  <header class="topbar">
+   <a class="topbar__brand" href="#main">
+    Account
+   </a>
+   <nav aria-label="Account navigation" class="topbar__nav">
+    <a href="#main">
+     Sign In
+    </a>
+    <a aria-current="page" href="#main">
+     Create Your Account
+    </a>
+    <a href="#main">
+     FAQ
+    </a>
+   </nav>
+  </header>
+  <main class="page" id="main">
+   <h1 class="page__title">
+    Create Your Account
+   </h1>
+   <p class="page__lede">
+    One account is all you need to access every service.
+    <br/>
+    Already have an account?
+    <a href="#main">
+     Sign In
+     <span aria-hidden="true">
+      ↗
+     </span>
+    </a>
+   </p>
+   <form action="#" class="form" method="post" novalidate="">
+    <!-- ============ SECTION: Your name ============ -->
+    <section class="section">
+     <h2 class="sr-only" id="sec-name">
+      Your name
+     </h2>
+     <div class="row row--2">
+      <div class="field">
+       <span class="sr-only">
+        First Name
+       </span>
+       <input autocomplete="given-name" class="control" data-field="first-name" id="first-name" name="first-name" placeholder="First Name" type="text"/>
+      </div>
+      <div class="field">
+       <span class="sr-only">
+        Last Name
+       </span>
+       <input autocomplete="family-name" class="control" data-field="last-name" id="last-name" name="last-name" placeholder="Last Name" type="text"/>
+      </div>
+     </div>
+     <div class="field field--stacked">
+      <span class="field__cap">
+       Country/Region
+      </span>
+      <select autocomplete="country" class="control control--select" data-field="country-region" id="country-region" name="country-region">
+       <option selected="">
+        United States
+       </option>
+       <option>
+        India
+       </option>
+       <option>
+        United Kingdom
+       </option>
+       <option>
+        Canada
+       </option>
+       <option>
+        Australia
+       </option>
+      </select>
+     </div>
+     <fieldset class="fieldset">
+      <legend class="fieldset__legend">
+       Birthday
+       <button aria-label="Why we ask for your birthday" class="iconbtn" data-field="birthday-help" type="button">
+        <span aria-hidden="true">
+         ?
+        </span>
+       </button>
+      </legend>
+      <div class="row row--3">
+       <div class="field">
+        <span class="sr-only">
+         Month
+        </span>
+        <select class="control control--select" data-field="birth-month" id="birth-month" name="birth-month">
+         <option selected="" value="">
+          Month
+         </option>
+         <option>
+          January
+         </option>
+         <option>
+          February
+         </option>
+         <option>
+          March
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <span class="sr-only">
+         Day
+        </span>
+        <select class="control control--select" data-field="birth-day" id="birth-day" name="birth-day">
+         <option selected="" value="">
+          Day
+         </option>
+         <option>
+          1
+         </option>
+         <option>
+          2
+         </option>
+         <option>
+          3
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <span class="sr-only">
+         Year
+        </span>
+        <select class="control control--select" data-field="birth-year" id="birth-year" name="birth-year">
+         <option selected="" value="">
+          Year
+         </option>
+         <option>
+          2000
+         </option>
+         <option>
+          1999
+         </option>
+         <option>
+          1998
+         </option>
+        </select>
+       </div>
+      </div>
+     </fieldset>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Account credentials ============ -->
+    <section class="section">
+     <h2 class="sr-only" id="sec-account">
+      Account credentials
+     </h2>
+     <div class="field">
+      <span class="sr-only">
+       Email address
+      </span>
+      <input autocomplete="email" class="control" data-field="email" id="email" name="email" placeholder="name@example.com" type="email"/>
+     </div>
+     <div class="field">
+      <span class="sr-only">
+       Password
+      </span>
+      <input autocomplete="new-password" class="control" data-field="password" id="password" name="password" placeholder="Password" type="password"/>
+     </div>
+     <div class="field">
+      <span class="sr-only">
+       Confirm Password
+      </span>
+      <input autocomplete="new-password" class="control" data-field="confirm-password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" type="password"/>
+     </div>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Phone verification ============ -->
+    <section class="section">
+     <h2 class="sr-only" id="sec-phone">
+      Phone verification
+     </h2>
+     <div class="field field--stacked">
+      <span class="field__cap">
+       Country Options
+      </span>
+      <select class="control control--select" data-field="phone-country" id="phone-country" name="phone-country">
+       <option selected="">
+        +1 (United States)
+       </option>
+       <option>
+        +91 (India)
+       </option>
+       <option>
+        +44 (United Kingdom)
+       </option>
+      </select>
+     </div>
+     <div class="field field--withicon">
+      <span class="sr-only">
+       Phone Number
+      </span>
+      <input aria-describedby="phone-hint" autocomplete="tel-national" class="control" data-field="phone-number" id="phone-number" name="phone-number" placeholder="Phone Number" type="tel"/>
+      <button aria-label="Why we ask for your phone number" class="iconbtn iconbtn--inset" data-field="phone-help" type="button">
+       <span aria-hidden="true">
+        ?
+       </span>
+      </button>
+     </div>
+     <p class="hint" id="phone-hint">
+      Be sure to enter a phone number you can always access. It will be used to verify
+        your identity any time you sign in on a new device or web browser. Messaging or
+        data rates may apply.
+     </p>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Email preferences ============ -->
+    <section class="section">
+     <h2 class="sr-only" id="sec-prefs">
+      Email preferences
+     </h2>
+     <div class="check">
+      <input aria-describedby="desc-announcements" checked="" class="check__box" data-field="opt-announcements" id="opt-announcements" name="opt-announcements" type="checkbox"/>
+      <div class="check__body">
+       <span class="check__label">
+        Announcements
+       </span>
+       <p class="check__desc" id="desc-announcements">
+        Receive emails and communications including announcements, marketing,
+            recommendations, and updates about products, services and software.
+       </p>
+      </div>
+     </div>
+     <div class="check">
+      <input aria-describedby="desc-media" checked="" class="check__box" data-field="opt-media" id="opt-media" name="opt-media" type="checkbox"/>
+      <div class="check__body">
+       <span class="check__label">
+        Apps, Music, TV, and More
+       </span>
+       <p class="check__desc" id="desc-media">
+        Receive emails and communications including new releases, exclusive content,
+            special offers, and marketing and recommendations for apps, music, movies,
+            TV, books, and podcasts.
+       </p>
+      </div>
+     </div>
+    </section>
+    <hr class="rule"/>
+    <!-- ============ SECTION: Verification ============ -->
+    <section class="section">
+     <h2 class="sr-only" id="sec-verify">
+      Verification
+     </h2>
+     <div class="verify">
+      <img alt="Verification image showing four distorted characters" class="verify__img" data-field="captcha-image" height="88" src="../assets/captcha.svg" width="220"/>
+      <div class="field verify__field">
+       <span class="sr-only">
+        Type the characters in the image
+       </span>
+       <input autocomplete="off" class="control" data-field="captcha-input" id="captcha-input" name="captcha-input" placeholder="Type the characters in the image" type="text"/>
+      </div>
+     </div>
+     <div class="verify__actions">
+      <button class="linkbtn" data-field="new-code" type="button">
+       <span aria-hidden="true" class="linkbtn__icon">
+        ↻
+       </span>
+       <span class="linkbtn__text">
+        New Code
+       </span>
+      </button>
+      <span aria-hidden="true" class="verify__sep">
+       |
+      </span>
+      <button aria-label="Hear the characters instead" class="linkbtn" data-field="audio-code" type="button">
+       <span aria-hidden="true" class="linkbtn__icon">
+        🔊
+       </span>
+       <span aria-hidden="true" class="linkbtn__text">
+        Vision Impaired
+       </span>
+      </button>
+     </div>
+    </section>
+    <div class="submit">
+     <button class="btn" data-field="continue" type="submit">
+      <span>
+       Continue
+      </span>
+     </button>
+    </div>
+   </form>
+  </main>
+ </body>
+</html>
