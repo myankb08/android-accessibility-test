@@ -1,0 +1,167 @@
+{
+  "page": "apple-signup",
+  "level": "L3",
+  "description": "Placeholder, autocomplete and semantic id/name removed",
+  "fields": [
+    {
+      "field": "first-name",
+      "order": 1,
+      "true_label": "First Name",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "last-name",
+      "order": 2,
+      "true_label": "Last Name",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "country-region",
+      "order": 3,
+      "true_label": "Country/Region",
+      "exposed_name": "",
+      "exposed_role": "combobox",
+      "status": "unnamed"
+    },
+    {
+      "field": "birthday-help",
+      "order": 4,
+      "true_label": "Why we ask for your birthday",
+      "exposed_name": "",
+      "exposed_role": "button",
+      "status": "unnamed"
+    },
+    {
+      "field": "birth-month",
+      "order": 5,
+      "true_label": "Birthday Month",
+      "exposed_name": "",
+      "exposed_role": "combobox",
+      "status": "unnamed"
+    },
+    {
+      "field": "birth-day",
+      "order": 6,
+      "true_label": "Birthday Day",
+      "exposed_name": "",
+      "exposed_role": "combobox",
+      "status": "unnamed"
+    },
+    {
+      "field": "birth-year",
+      "order": 7,
+      "true_label": "Birthday Year",
+      "exposed_name": "",
+      "exposed_role": "combobox",
+      "status": "unnamed"
+    },
+    {
+      "field": "email",
+      "order": 8,
+      "true_label": "Email address",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "password",
+      "order": 9,
+      "true_label": "Password",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "confirm-password",
+      "order": 10,
+      "true_label": "Confirm Password",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "phone-country",
+      "order": 11,
+      "true_label": "Phone country code",
+      "exposed_name": "",
+      "exposed_role": "combobox",
+      "status": "unnamed"
+    },
+    {
+      "field": "phone-number",
+      "order": 12,
+      "true_label": "Phone Number",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "phone-help",
+      "order": 13,
+      "true_label": "Why we ask for your phone number",
+      "exposed_name": "",
+      "exposed_role": "button",
+      "status": "unnamed"
+    },
+    {
+      "field": "opt-announcements",
+      "order": 14,
+      "true_label": "Announcements",
+      "exposed_name": "",
+      "exposed_role": "checkbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "opt-media",
+      "order": 15,
+      "true_label": "Apps, Music, TV, and More",
+      "exposed_name": "",
+      "exposed_role": "checkbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "captcha-image",
+      "order": 16,
+      "true_label": "Verification image showing four distorted characters",
+      "exposed_name": "",
+      "exposed_role": "image",
+      "status": "unnamed"
+    },
+    {
+      "field": "captcha-input",
+      "order": 17,
+      "true_label": "Type the characters in the image",
+      "exposed_name": "",
+      "exposed_role": "textbox",
+      "status": "unnamed"
+    },
+    {
+      "field": "new-code",
+      "order": 18,
+      "true_label": "New Code",
+      "exposed_name": "New Code",
+      "exposed_role": "button",
+      "status": "named"
+    },
+    {
+      "field": "audio-code",
+      "order": 19,
+      "true_label": "Hear the characters instead",
+      "exposed_name": "",
+      "exposed_role": "button",
+      "status": "unnamed"
+    },
+    {
+      "field": "continue",
+      "order": 20,
+      "true_label": "Continue",
+      "exposed_name": "Continue",
+      "exposed_role": "button",
+      "status": "named"
+    }
+  ]
+}
