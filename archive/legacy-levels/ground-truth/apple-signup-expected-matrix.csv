@@ -1,0 +1,21 @@
+field,order,true_label,L0,L1,L2,L3,L4,L5
+first-name,1,"First Name",named,named,named,unnamed,unnamed,misnamed
+last-name,2,"Last Name",named,named,named,unnamed,unnamed,misnamed
+country-region,3,"Country/Region",named,unnamed,unnamed,unnamed,misnamed,named
+birthday-help,4,"Why we ask for your birthday",named,named,unnamed,unnamed,unnamed,misnamed
+birth-month,5,"Birthday Month",named,unnamed,unnamed,unnamed,named,misnamed
+birth-day,6,"Birthday Day",named,unnamed,unnamed,unnamed,named,misnamed
+birth-year,7,"Birthday Year",named,unnamed,unnamed,unnamed,named,misnamed
+email,8,"Email address",named,misnamed,misnamed,unnamed,unnamed,misnamed
+password,9,"Password",named,named,named,unnamed,unnamed,misnamed
+confirm-password,10,"Confirm Password",named,named,named,unnamed,unnamed,misnamed
+phone-country,11,"Phone country code",named,unnamed,unnamed,unnamed,misnamed,named
+phone-number,12,"Phone Number",named,named,named,unnamed,unnamed,misnamed
+phone-help,13,"Why we ask for your phone number",named,named,unnamed,unnamed,unnamed,misnamed
+opt-announcements,14,"Announcements",named,unnamed,unnamed,unnamed,unnamed,named
+opt-media,15,"Apps; Music; TV; and More",named,unnamed,unnamed,unnamed,unnamed,named
+captcha-image,16,"Verification image showing four distorted characters",named,named,unnamed,unnamed,unnamed,misnamed
+captcha-input,17,"Type the characters in the image",named,named,named,unnamed,unnamed,misnamed
+new-code,18,"New Code",named,named,named,named,named,named
+audio-code,19,"Hear the characters instead",named,named,unnamed,unnamed,unnamed,misnamed
+continue,20,"Continue",named,named,named,named,named,named

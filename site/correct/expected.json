@@ -1,0 +1,68 @@
+[
+  {
+    "field": "first-name",
+    "target": true,
+    "expected_programmatic_label": "First name",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "last-name",
+    "target": true,
+    "expected_programmatic_label": "Last name",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "country-region",
+    "target": false,
+    "expected_programmatic_label": "Country/Region",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "birth-month",
+    "target": false,
+    "expected_programmatic_label": "Month",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "birth-day",
+    "target": false,
+    "expected_programmatic_label": "Day",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "birth-year",
+    "target": false,
+    "expected_programmatic_label": "Year",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "email",
+    "target": true,
+    "expected_programmatic_label": "Email address",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "password",
+    "target": true,
+    "expected_programmatic_label": "Password",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "confirm-password",
+    "target": true,
+    "expected_programmatic_label": "Confirm password",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "phone-number",
+    "target": true,
+    "expected_programmatic_label": "Phone number",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  },
+  {
+    "field": "opt-announcements",
+    "target": false,
+    "expected_programmatic_label": "Receive announcements by email (optional)",
+    "note": "Verify on the study phone; browser inference and OCR may supply text."
+  }
+]

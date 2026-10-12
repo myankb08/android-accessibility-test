@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Create your account</title>
+<link href="../style.css" rel="stylesheet"/>
+<script defer="" src="../study.js"></script>
+</head>
+<body data-condition="correct">
+<header class="topbar"><span class="topbar__brand">Account</span></header>
+<main class="page">
+<h1 class="page__title">Create your account</h1>
+<p>Use the fictitious information provided for this task. No account will be created.</p>
+<section id="ready">
+<p>Select Start when you are ready. You can end the task at any time.</p>
+<button class="btn" id="start" type="button">Start</button>
+</section>
+<form autocomplete="off" class="form" hidden="" id="signup" novalidate="">
+<p>All fields are required except the email preference.</p>
+<div aria-labelledby="errors-title" hidden="" id="errors" role="group" tabindex="-1">
+<h2 id="errors-title">Please check your entries</h2><ul id="error-list"></ul>
+</div>
+<section class="section">
+<h2>Your name</h2>
+<div class="row row--2">
+<div class="field"><label class="field-label" for="f01">First name</label><input class="control" data-field="first-name" id="f01" name="f01" required="" type="text"/></div>
+<div class="field"><label class="field-label" for="f02">Last name</label><input class="control" data-field="last-name" id="f02" name="f02" required="" type="text"/></div>
+</div>
+<div class="field"><label class="field-label" for="f03">Country/Region</label><select class="control control--select" data-field="country-region" id="f03" name="f03" required=""><option value="">Choose a country</option><option>India</option><option>United States</option><option>United Kingdom</option></select></div>
+<fieldset class="fieldset"><legend>Birthday</legend><div class="row row--3">
+<div class="field"><label class="field-label" for="f04">Month</label><select class="control control--select" data-field="birth-month" id="f04" name="f04" required=""><option value="">Choose</option><option>January</option><option>February</option><option>March</option></select></div>
+<div class="field"><label class="field-label" for="f05">Day</label><select class="control control--select" data-field="birth-day" id="f05" name="f05" required=""><option value="">Choose</option><option>1</option><option>2</option><option>3</option></select></div>
+<div class="field"><label class="field-label" for="f06">Year</label><select class="control control--select" data-field="birth-year" id="f06" name="f06" required=""><option value="">Choose</option><option>2000</option><option>1999</option><option>1998</option></select></div>
+</div></fieldset>
+</section>
+<hr class="rule"/>
+<section class="section">
+<h2>Account details</h2>
+<div class="field"><label class="field-label" for="f07">Email address</label><input class="control" data-field="email" id="f07" name="f07" required="" type="email"/></div>
+<div class="field"><label class="field-label" for="f08">Password</label><input class="control" data-field="password" id="f08" name="f08" required="" type="password"/></div>
+<div class="field"><label class="field-label" for="f09">Confirm password</label><input class="control" data-field="confirm-password" id="f09" name="f09" required="" type="password"/></div>
+<div class="field"><label class="field-label" for="f10">Phone number</label><input class="control" data-field="phone-number" id="f10" name="f10" required="" type="tel"/></div>
+</section>
+<div class="check"><input class="check__box" data-field="opt-announcements" id="f11" name="f11" type="checkbox"/><label for="f11">Receive announcements by email (optional)</label></div>
+<div class="submit"><button class="btn" type="submit">Continue</button></div>
+<button class="linkbtn" id="stop" type="button">End task without submitting</button>
+</form>
+<section aria-labelledby="result-title" hidden="" id="result" tabindex="-1">
+<h2 id="result-title"></h2><p id="result-message"></p>
+<details><summary>Researcher: session results</summary>
+<p id="summary"></p><button id="download" type="button">Download session log</button>
+<p><a href="../">Set up another task</a></p>
+</details>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "fields": [
+    {
+      "field": "first-name",
+      "id": "f01",
+      "order": 1,
+      "true_label": "First name",
+      "acceptable_labels": [
+        "First name",
+        "Given name"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "text"
+    },
+    {
+      "field": "last-name",
+      "id": "f02",
+      "order": 2,
+      "true_label": "Last name",
+      "acceptable_labels": [
+        "Last name",
+        "Surname",
+        "Family name"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "text"
+    },
+    {
+      "field": "country-region",
+      "id": "f03",
+      "order": 3,
+      "true_label": "Country/Region",
+      "acceptable_labels": [
+        "Country/Region",
+        "Country",
+        "Region",
+        "Country or region"
+      ],
+      "target": false,
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birth-month",
+      "id": "f04",
+      "order": 4,
+      "true_label": "Month",
+      "acceptable_labels": [
+        "Month",
+        "Birthday month",
+        "Birth month"
+      ],
+      "target": false,
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birth-day",
+      "id": "f05",
+      "order": 5,
+      "true_label": "Day",
+      "acceptable_labels": [
+        "Day",
+        "Birthday day",
+        "Birth day"
+      ],
+      "target": false,
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birth-year",
+      "id": "f06",
+      "order": 6,
+      "true_label": "Year",
+      "acceptable_labels": [
+        "Year",
+        "Birthday year",
+        "Birth year"
+      ],
+      "target": false,
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "email",
+      "id": "f07",
+      "order": 7,
+      "true_label": "Email address",
+      "acceptable_labels": [
+        "Email address",
+        "Email",
+        "E-mail address"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "email"
+    },
+    {
+      "field": "password",
+      "id": "f08",
+      "order": 8,
+      "true_label": "Password",
+      "acceptable_labels": [
+        "Password",
+        "New password",
+        "Create password"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "password"
+    },
+    {
+      "field": "confirm-password",
+      "id": "f09",
+      "order": 9,
+      "true_label": "Confirm password",
+      "acceptable_labels": [
+        "Confirm password",
+        "Re-enter password",
+        "Repeat password",
+        "Verify password"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "password"
+    },
+    {
+      "field": "phone-number",
+      "id": "f10",
+      "order": 10,
+      "true_label": "Phone number",
+      "acceptable_labels": [
+        "Phone number",
+        "Phone",
+        "Mobile number",
+        "Telephone number"
+      ],
+      "target": true,
+      "element": "input",
+      "input_type": "tel"
+    },
+    {
+      "field": "opt-announcements",
+      "id": "f11",
+      "order": 11,
+      "true_label": "Receive announcements by email (optional)",
+      "acceptable_labels": [
+        "Receive announcements by email (optional)",
+        "Receive announcements",
+        "Announcements"
+      ],
+      "target": false,
+      "element": "input",
+      "input_type": "checkbox"
+    }
+  ]
+}

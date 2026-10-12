@@ -1,0 +1,302 @@
+{
+  "page": "apple-signup",
+  "source": "hand-authored, not derived from any third-party page source",
+  "fields": [
+    {
+      "field": "first-name",
+      "order": 1,
+      "true_label": "First Name",
+      "acceptable_labels": [
+        "First Name",
+        "First name",
+        "Given name"
+      ],
+      "role": "textbox",
+      "section": "Your name",
+      "element": "input",
+      "input_type": "text"
+    },
+    {
+      "field": "last-name",
+      "order": 2,
+      "true_label": "Last Name",
+      "acceptable_labels": [
+        "Last Name",
+        "Last name",
+        "Surname",
+        "Family name"
+      ],
+      "role": "textbox",
+      "section": "Your name",
+      "element": "input",
+      "input_type": "text"
+    },
+    {
+      "field": "country-region",
+      "order": 3,
+      "true_label": "Country/Region",
+      "acceptable_labels": [
+        "Country/Region",
+        "Country",
+        "Region",
+        "Country or region"
+      ],
+      "role": "combobox",
+      "section": "Your name",
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birthday-help",
+      "order": 4,
+      "true_label": "Why we ask for your birthday",
+      "acceptable_labels": [
+        "Why we ask for your birthday",
+        "Birthday help",
+        "More information about birthday"
+      ],
+      "role": "button",
+      "section": "Your name",
+      "element": "button",
+      "input_type": "button"
+    },
+    {
+      "field": "birth-month",
+      "order": 5,
+      "true_label": "Birthday Month",
+      "acceptable_labels": [
+        "Birthday Month",
+        "Month",
+        "Birth month"
+      ],
+      "role": "combobox",
+      "section": "Birthday",
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birth-day",
+      "order": 6,
+      "true_label": "Birthday Day",
+      "acceptable_labels": [
+        "Birthday Day",
+        "Day",
+        "Birth day",
+        "Date"
+      ],
+      "role": "combobox",
+      "section": "Birthday",
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "birth-year",
+      "order": 7,
+      "true_label": "Birthday Year",
+      "acceptable_labels": [
+        "Birthday Year",
+        "Year",
+        "Birth year"
+      ],
+      "role": "combobox",
+      "section": "Birthday",
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "email",
+      "order": 8,
+      "true_label": "Email address",
+      "acceptable_labels": [
+        "Email address",
+        "Email",
+        "E-mail",
+        "Email address"
+      ],
+      "role": "textbox",
+      "section": "Account credentials",
+      "element": "input",
+      "input_type": "email"
+    },
+    {
+      "field": "password",
+      "order": 9,
+      "true_label": "Password",
+      "acceptable_labels": [
+        "Password",
+        "Password",
+        "New password",
+        "Create password"
+      ],
+      "role": "textbox",
+      "section": "Account credentials",
+      "element": "input",
+      "input_type": "password"
+    },
+    {
+      "field": "confirm-password",
+      "order": 10,
+      "true_label": "Confirm Password",
+      "acceptable_labels": [
+        "Confirm Password",
+        "Confirm password",
+        "Re-enter password",
+        "Repeat password",
+        "Verify password"
+      ],
+      "role": "textbox",
+      "section": "Account credentials",
+      "element": "input",
+      "input_type": "password"
+    },
+    {
+      "field": "phone-country",
+      "order": 11,
+      "true_label": "Phone country code",
+      "acceptable_labels": [
+        "Phone country code",
+        "Country Options",
+        "Country code",
+        "Dialling code"
+      ],
+      "role": "combobox",
+      "section": "Phone verification",
+      "element": "select",
+      "input_type": null
+    },
+    {
+      "field": "phone-number",
+      "order": 12,
+      "true_label": "Phone Number",
+      "acceptable_labels": [
+        "Phone Number",
+        "Phone",
+        "Phone number",
+        "Mobile number",
+        "Telephone number"
+      ],
+      "role": "textbox",
+      "section": "Phone verification",
+      "element": "input",
+      "input_type": "tel"
+    },
+    {
+      "field": "phone-help",
+      "order": 13,
+      "true_label": "Why we ask for your phone number",
+      "acceptable_labels": [
+        "Why we ask for your phone number",
+        "Phone number help",
+        "More information about phone number"
+      ],
+      "role": "button",
+      "section": "Phone verification",
+      "element": "button",
+      "input_type": "button"
+    },
+    {
+      "field": "opt-announcements",
+      "order": 14,
+      "true_label": "Announcements",
+      "acceptable_labels": [
+        "Announcements",
+        "Announcements",
+        "Receive announcements",
+        "Marketing announcements"
+      ],
+      "role": "checkbox",
+      "section": "Email preferences",
+      "element": "input",
+      "input_type": "checkbox"
+    },
+    {
+      "field": "opt-media",
+      "order": 15,
+      "true_label": "Apps, Music, TV, and More",
+      "acceptable_labels": [
+        "Apps, Music, TV, and More",
+        "Apps Music TV and More",
+        "Media and entertainment emails"
+      ],
+      "role": "checkbox",
+      "section": "Email preferences",
+      "element": "input",
+      "input_type": "checkbox"
+    },
+    {
+      "field": "captcha-image",
+      "order": 16,
+      "true_label": "Verification image showing four distorted characters",
+      "acceptable_labels": [
+        "Verification image showing four distorted characters",
+        "Captcha image",
+        "Verification image",
+        "Security image"
+      ],
+      "role": "image",
+      "section": "Verification",
+      "element": "img",
+      "input_type": null
+    },
+    {
+      "field": "captcha-input",
+      "order": 17,
+      "true_label": "Type the characters in the image",
+      "acceptable_labels": [
+        "Type the characters in the image",
+        "Verification code",
+        "Captcha answer",
+        "Characters from the image"
+      ],
+      "role": "textbox",
+      "section": "Verification",
+      "element": "input",
+      "input_type": "text"
+    },
+    {
+      "field": "new-code",
+      "order": 18,
+      "true_label": "New Code",
+      "acceptable_labels": [
+        "New Code",
+        "New code",
+        "Refresh code",
+        "Get a new image"
+      ],
+      "role": "button",
+      "section": "Verification",
+      "element": "button",
+      "input_type": "button"
+    },
+    {
+      "field": "audio-code",
+      "order": 19,
+      "true_label": "Hear the characters instead",
+      "acceptable_labels": [
+        "Hear the characters instead",
+        "Audio code",
+        "Vision impaired option",
+        "Play audio version"
+      ],
+      "role": "button",
+      "section": "Verification",
+      "element": "button",
+      "input_type": "button"
+    },
+    {
+      "field": "continue",
+      "order": 20,
+      "true_label": "Continue",
+      "acceptable_labels": [
+        "Continue",
+        "Continue",
+        "Submit",
+        "Create account"
+      ],
+      "role": "button",
+      "section": "Verification",
+      "element": "button",
+      "input_type": "submit"
+    }
+  ]
+}

@@ -6,9 +6,8 @@
    and re-implemented independently: 482px column, 56px controls, 1px #86868b
    borders, 12px radius, #6e6e73 placeholder ink.
 
-   The same file is loaded by every level, which is what guarantees that L0-L5
-   render identically. If you change a metric here, change its ghost-text
-   counterpart too and re-run the parity check.
+   Shared by the correct and degraded form. Legacy styles are retained for
+   layout reuse; the active pages contain no ghost text or generic controls.
    ========================================================================== */
 
 :root {
@@ -482,3 +481,15 @@ div.linkbtn { display: inline-flex; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* Active two-version study form. */
+[hidden] { display: none !important; }
+.field-label { display: block; margin-bottom: 6px; }
+.field-error, #errors { color: #9b1c1c; }
+#errors { border: 2px solid currentColor; padding: 16px; margin-bottom: 24px; }
+#result:focus, #errors:focus { outline: 3px solid var(--accent); outline-offset: 4px; }
+#stop { margin: 24px 0; }
+#result details { margin-top: 32px; }
+dt { font-weight: 600; margin-top: 10px; }
+dd { margin-left: 0; overflow-wrap: anywhere; }
+button { cursor: pointer; }

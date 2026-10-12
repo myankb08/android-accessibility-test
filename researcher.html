@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HintBack task setup</title><link rel="stylesheet" href="style.css"><script src="researcher.js" defer></script></head>
+<body><main class="page"><h1>Researcher: task setup</h1>
+<p>Use a study code, not a participant name. Read the fictitious task information before opening the form. Start the matching Android diagnostic trial separately.</p>
+<form id="setup">
+<div class="field"><label for="trial">Trial ID</label><input class="control" id="trial" required pattern="[A-Za-z0-9_-]{1,64}" maxlength="64"></div>
+<div class="field"><label for="condition">Form version</label><select class="control" id="condition"><option value="correct">Correct</option><option value="degraded">Degraded</option></select></div>
+<div class="field"><label for="reader">Screen reader condition (record only)</label><select class="control" id="reader"><option value="talkback">TalkBack</option><option value="hintback">HintBack</option></select></div>
+<div class="field"><label for="task">Dummy data set</label><select class="control" id="task"><option>A</option><option>B</option></select></div>
+<dl id="values"></dl><p>Leave the optional email preference unchecked. All other values must match the task information. Keep these instructions available in an accessible format separately from the form.</p>
+<button class="btn">Open task</button><p id="setup-error" role="alert"></p>
+</form></main></body></html>

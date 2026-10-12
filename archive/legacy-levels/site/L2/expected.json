@@ -1,7 +1,7 @@
 {
   "page": "apple-signup",
-  "level": "L1",
-  "description": "Label associations broken (for/id unbound)",
+  "level": "L2",
+  "description": "All AT-only strings removed (sr-only labels, ARIA, alt, title)",
   "fields": [
     {
       "field": "first-name",
@@ -31,9 +31,9 @@
       "field": "birthday-help",
       "order": 4,
       "true_label": "Why we ask for your birthday",
-      "exposed_name": "Why we ask for your birthday",
+      "exposed_name": "",
       "exposed_role": "button",
-      "status": "named"
+      "status": "unnamed"
     },
     {
       "field": "birth-month",
@@ -103,9 +103,9 @@
       "field": "phone-help",
       "order": 13,
       "true_label": "Why we ask for your phone number",
-      "exposed_name": "Why we ask for your phone number",
+      "exposed_name": "",
       "exposed_role": "button",
-      "status": "named"
+      "status": "unnamed"
     },
     {
       "field": "opt-announcements",
@@ -127,9 +127,9 @@
       "field": "captcha-image",
       "order": 16,
       "true_label": "Verification image showing four distorted characters",
-      "exposed_name": "Verification image showing four distorted characters",
+      "exposed_name": "",
       "exposed_role": "image",
-      "status": "named"
+      "status": "unnamed"
     },
     {
       "field": "captcha-input",
@@ -151,9 +151,9 @@
       "field": "audio-code",
       "order": 19,
       "true_label": "Hear the characters instead",
-      "exposed_name": "Hear the characters instead",
+      "exposed_name": "",
       "exposed_role": "button",
-      "status": "named"
+      "status": "unnamed"
     },
     {
       "field": "continue",

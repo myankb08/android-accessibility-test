@@ -1,0 +1,12 @@
+field,true_label,target,correct,degraded
+first-name,First name,True,associated label,unassociated visible text
+last-name,Last name,True,associated label,unassociated visible text
+country-region,Country/Region,False,associated label,associated label
+birth-month,Month,False,associated label,associated label
+birth-day,Day,False,associated label,associated label
+birth-year,Year,False,associated label,associated label
+email,Email address,True,associated label,unassociated visible text
+password,Password,True,associated label,unassociated visible text
+confirm-password,Confirm password,True,associated label,unassociated visible text
+phone-number,Phone number,True,associated label,unassociated visible text
+opt-announcements,Receive announcements by email (optional),False,associated label,associated label
